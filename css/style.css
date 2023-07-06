@@ -1,0 +1,285 @@
+/*reset general*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*  -----    INDEX   -----    */
+
+/*estilos del header*/
+
+header{
+    gap: 50px;    
+}
+
+.modal-title{
+    margin-right: 50px;
+}
+
+body header nav div img{
+    margin-left: 50px;
+}
+
+/*estilos titulo secundario*/
+
+.section-secundario{
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 1rem ;
+    text-decoration: underline;
+}
+
+/*propiedades main*/
+
+main{
+    height: 60vh;
+    display: grid;
+    grid-template-areas: 
+    "titulo"
+    "escritura"    
+    "boton";
+    justify-content: center;
+    align-items: center;
+    gap: 2%;    
+    margin: 2%;
+    
+}
+
+/*estilos del titulo principal del main*/
+
+.contenedor-titulo{
+    text-align: center;
+    grid-area: titulo;
+}
+
+/*estilos del parrafo principal*/
+
+.contenedor-parrafo-escrito{
+    font-size: 0.8em;
+    text-align: justify;
+    white-space: pre-line; /*saltos de linea en el texto*/
+    grid-area: escritura;
+}
+
+/*estilos de la foto principal*/
+
+.contenedor-foto{
+    display: none;
+    grid-area: foto;
+}
+
+/*contenedor del boton pricipal*/
+
+.contenedor-boton{    
+    margin-top: 30px;
+    text-align: center;
+    grid-area: boton;
+}
+
+/*estilos generales del boton principal*/
+
+.contenedor-boton-estilo{
+    
+    width: 150px;
+    height: 50px;
+}
+
+/*estilos del boton al posicionarse sobre el mismo*/
+
+.contenedor-boton-estilo:hover{
+    border-radius: 30%;
+    background-color: aqua;
+}
+
+
+/*estilos footer*/
+
+footer{
+    margin-top: 0.5rem;
+    text-align: center;
+    color: gray;
+}
+
+/*estilos al cambio de tamaño a tablet*/
+
+@media screen and (min-width: 800px) {
+
+    .section-secundario{
+        display: none;
+    }
+
+    /*propiedades main*/
+
+    main{
+        max-width: 100%;
+        height: auto;
+        display: grid;
+       
+        grid-template-areas: 
+        "titulo    titulo"
+        "escritura foto"            
+        "boton     boton";
+        justify-content: center;
+        align-items: center;    
+        margin: 2%;
+    }
+
+    main div h3{
+        font-size: 3em;
+    }
+
+    .contenedor-parrafo-escrito{
+        font-size: 1em;       
+    }
+
+    .contenedor-foto{
+        display: block;
+        grid-area: foto;
+    }    
+    
+    main div img{
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    /*estilos del footer*/
+
+    footer{
+        margin-top: 5rem;
+        text-align: center;
+        color: gray;
+    }
+}
+
+/*estilos al cambio de tamaño a pc*/
+
+@media screen and (min-width: 1024px) {
+
+    main div h3{
+        font-size: 4em;
+    }
+
+    .contenedor-parrafo-escrito{
+        font-size: 1.2em;       
+    }
+
+}
+
+
+
+
+/*  -----    NOSOTROS   -----    */
+
+/*para cambiar los botones del carousel de bootstrap*/
+
+.carousel-control-prev, .carousel-control-next {
+    background-color: rgb(112, 111, 111); /* Cambia el colo a rojo */
+    border-radius: 0%;
+    border: 2px solid black;
+    width: 50px;
+    height: 50px;
+
+}
+
+/*para cambiar los botones del carousel al posicionarse sobre los mismos*/
+
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    background-color: rgb(141, 141, 141); /* Cambia el colo a rojo */
+    border-radius: 0%;
+    border: 2px solid black;
+}
+
+/*.carousel-item{
+    transition: none
+}*/ /*por si no se quiere que haga el aumento al pasar la diapo*/
+
+
+/* ------FORMULARIO DE CONTACTO --------- */
+
+.contacto{    
+    background: linear-gradient(rgba(7, 5, 12, 0.15), rgba(5, 7, 12, 0.15)), url(../img/contacto.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    
+}
+
+.contacto-main{
+    display: grid;
+    grid-template-areas: 
+    "titulo"
+    "elementos"
+    "descripcion"
+    "boton";
+    
+    justify-content: center;
+    align-items: center;
+   
+}
+
+
+
+.contacto-main-titulo{
+    grid-area: titulo;
+    background-color: gray;
+}
+
+.contacto-main-elementos-formulario{
+    display: flex;
+    flex-direction: column;   
+    background-color: gray; 
+    
+    
+}
+
+body main div form div label{
+    display: inline-block;
+    width: 100px;
+
+}
+
+.contacto-main-elementos-formulario-linea{
+    margin: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.contacto-main-elementos{
+    
+    grid-area: elementos;
+}
+
+.contacto-main-descripcion{
+    grid-area: descripcion;
+}
+
+.contacto-main-boton{
+    grid-area: boton;
+}
+
+.contacto-main-boton-estilo{
+    width: 150px;
+    height: 50px;
+    border: 3px solid red;
+}
+
+.contacto-main-boton-estilo:hover{
+    width: 160px;
+    height: 55px;
+    border: 3px solid rgb(0, 255, 0);
+    color: gray;
+    border-radius: none;
+}
+
+.contacto-footer{
+    margin-top: 10%;
+}
+
+.contacto-footer-frase{
+    text-align: center;       
+    color: whitesmoke;
+}
