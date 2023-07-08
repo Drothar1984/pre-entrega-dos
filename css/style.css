@@ -306,3 +306,85 @@ body main div form div label{
 }
 
 
+
+/*cambio de estilo para paginas phising y sustraccion de identidad*/
+
+
+.container{
+    height: 60vh;
+    display: grid;
+    grid-template-areas: 
+    "titulo"
+    "escritura"    
+    "boton";
+    justify-content: center;
+    align-items: center;
+    gap: 2%;    
+    margin: 2%;
+    
+}
+
+/*estilos del titulo principal del main*/
+
+.container-titulo{
+    text-align: center;
+    grid-area: titulo;
+}
+
+/*estilos del parrafo principal*/
+
+.container-parrafo-escrito{
+    font-size: 0.8em;
+    text-align: justify;
+    white-space: pre-line; /*saltos de linea en el texto*/
+    grid-area: escritura;
+}
+
+/*estilos de la foto principal*/
+
+.container-foto{
+    display: none;
+    grid-area: foto;   
+}
+
+
+@media screen and (min-width: 800px) {
+
+    /*propiedades main*/
+
+    .container{
+        max-width: 100%;
+        height: auto;
+        display: grid;
+       
+        grid-template-areas: 
+        "titulo    titulo"
+        "foto      escritura"            
+        "boton     boton";
+        justify-content: center;
+        align-items: center;    
+        margin: 2%;
+    }
+
+    .container{
+        max-width: 90%;
+        gap: 20px;
+    }
+    
+    .container-parrafo-escrito{
+        font-size: 1em;       
+    }
+
+    .container-foto{
+        display: block;
+        grid-area: foto;
+    }    
+    
+    main div img{
+        display: block;
+        max-width: 100%;
+        height: auto;
+        
+    }
+
+}
