@@ -104,6 +104,12 @@ footer{
     color: gray;
 }
 
+.footer-principal{
+    margin-top: 5rem;
+    text-align: center;
+    color: gray;
+}
+
 footer p .footer-frase{
     
     text-align: center;       
@@ -299,9 +305,4 @@ body main div form div label{
     border-radius: none;
 }
 
-
-
-
-
-/*----------SKIRMMING------------*/
 
