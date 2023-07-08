@@ -27,7 +27,8 @@ body header nav div img{
 
 .section-secundario{
     font-size: 3rem;
-    text-align: center;
+    display: flex;
+    justify-content: center;    
     margin-top: 1rem ;
     text-decoration: underline;
 }
@@ -98,9 +99,15 @@ main{
 /*estilos footer*/
 
 footer{
-    margin-top: 5rem;
+    margin-top: 2rem;
     text-align: center;
     color: gray;
+}
+
+footer p .footer-frase{
+    
+    text-align: center;       
+    color: whitesmoke;
 }
 
 /*estilos al cambio de tamaño a tablet*/
@@ -292,19 +299,9 @@ body main div form div label{
     border-radius: none;
 }
 
-/*estilos del footer*/
 
-.contacto-footer{
-    margin-top: 6rem;
-}
 
-/*frase del footer*/
-
-.contacto-footer-frase{
-    
-    text-align: center;       
-    color: whitesmoke;
-}
 
 
 /*----------SKIRMMING------------*/
+
